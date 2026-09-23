@@ -106,22 +106,36 @@
       <h2>Gifts with personality.</h2>
       <p>Here are a few examples of the kind of things Dotzee creates — from personalised gifts and floral candles to hampers, baby gifts and corporate creations.</p>
     </div>
-    <div class="gallery">
-      <figure><img src="images/DZ8.jpeg" alt="Dotzee corporate survival pack"><figcaption>Corporate Survival Packs</figcaption></figure>
-            <figure><img src="images/gallery-01.jpeg" alt="Dotzee Mother's Day chocolate balloon gift"><figcaption>Mother's Day Gifts</figcaption></figure>
-      <figure><img src="images/gallery-02.jpeg" alt="Dotzee personalised wine and chocolate gift"><figcaption>Personalised Gifts</figcaption></figure>
-      <figure><img src="images/gallery-03.jpeg" alt="Dotzee personalised baby girl gift"><figcaption>Baby &amp; Newborn Gifts</figcaption></figure>
-      <figure><img src="images/gallery-04.jpeg" alt="Dotzee personalised Mona floral gift"><figcaption>Personalised Floral Gifts</figcaption></figure>
-      <figure><img src="images/gallery-05.jpeg" alt="Dotzee purple floral beeswax candle bouquet"><figcaption>Floral Candle Bouquets</figcaption></figure>
-      <figure><img src="images/gallery-06.jpeg" alt="Dotzee personalised Most Amazing Mom gift"><figcaption>Mother's Day Gifts</figcaption></figure>
-      <figure><img src="images/gallery-07.jpeg" alt="Dotzee Best Dad Ever gift"><figcaption>Father's Day Gifts</figcaption></figure>
-      <figure><img src="images/gallery-08.jpeg" alt="Dotzee personalised name bookmarks with tassels"><figcaption>Personalised Bookmarks</figcaption></figure>
-      <figure><img src="images/gallery-09.jpeg" alt="Dotzee purple floral candle tins"><figcaption>Floral Candle Bouquets</figcaption></figure>
-      <figure><img src="images/gallery-10.jpeg" alt="Dotzee Ferrero Rocher chocolate flower gifts"><figcaption>Chocolate Flower Gifts</figcaption></figure>
-      <figure><img src="images/gallery-11.jpeg" alt="Dotzee Mother's Day gift boxes"><figcaption>Mother's Day Gift Boxes</figcaption></figure>
-      <figure><img src="images/gallery-12.jpeg" alt="Dotzee teddy bear floral candle bouquet"><figcaption>Floral Candle Bouquets</figcaption></figure>
-      <figure><img src="images/gallery-13.jpeg" alt="Dotzee personalised baby boy gift"><figcaption>Baby &amp; Newborn Gifts</figcaption></figure>
-      <figure><img src="images/gallery-14.jpeg" alt="Dotzee Best Mom personalised hamper"><figcaption>Mother's Day Gifts</figcaption></figure>
+    <div class="gallery" id="gallery-grid">
+      <figure><img src="images/DZ8.jpeg" alt="Dotzee corporate survival pack" loading="lazy" decoding="async"><figcaption>Corporate Survival Packs</figcaption></figure>
+      <figure><img src="images/gallery-01.jpeg" alt="Dotzee Mother's Day chocolate balloon gift" loading="lazy" decoding="async"><figcaption>Mother's Day Gifts</figcaption></figure>
+      <figure><img src="images/gallery-02.jpeg" alt="Dotzee personalised wine and chocolate gift" loading="lazy" decoding="async"><figcaption>Personalised Gifts</figcaption></figure>
+      <figure><img src="images/gallery-03.jpeg" alt="Dotzee personalised baby girl gift" loading="lazy" decoding="async"><figcaption>Baby &amp; Newborn Gifts</figcaption></figure>
+      <figure><img src="images/gallery-05.jpeg" alt="Dotzee purple floral beeswax candle bouquet" loading="lazy" decoding="async"><figcaption>Floral Candle Bouquets</figcaption></figure>
+      <figure><img src="images/gallery-10.jpeg" alt="Dotzee Ferrero Rocher chocolate flower gifts" loading="lazy" decoding="async"><figcaption>Chocolate Flower Gifts</figcaption></figure>
+
+      <figure class="gallery-extra"><img src="images/gallery-04.jpeg" alt="Dotzee personalised Mona floral gift" loading="lazy" decoding="async"><figcaption>Personalised Floral Gifts</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-06.jpeg" alt="Dotzee personalised Most Amazing Mom gift" loading="lazy" decoding="async"><figcaption>Mother's Day Gifts</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-07.jpeg" alt="Dotzee Best Dad Ever gift" loading="lazy" decoding="async"><figcaption>Father's Day Gifts</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-08.jpeg" alt="Dotzee personalised name bookmarks with tassels" loading="lazy" decoding="async"><figcaption>Personalised Bookmarks</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-09.jpeg" alt="Dotzee purple floral candle tins" loading="lazy" decoding="async"><figcaption>Mother's Day Gifts</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-11.jpeg" alt="Dotzee Mother's Day gift boxes" loading="lazy" decoding="async"><figcaption>Mother's Day Gift Boxes</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-12.jpeg" alt="Dotzee teddy bear floral candle bouquet" loading="lazy" decoding="async"><figcaption>Floral Candle Bouquets</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-13.jpeg" alt="Dotzee personalised baby boy gift" loading="lazy" decoding="async"><figcaption>Baby &amp; Newborn Gifts</figcaption></figure>
+      <figure class="gallery-extra"><img src="images/gallery-14.jpeg" alt="Dotzee Best Mom personalised hamper" loading="lazy" decoding="async"><figcaption>Mother's Day Gifts</figcaption></figure>
+    </div>
+    <div class="gallery-actions">
+      <button class="btn btn-light gallery-toggle" id="gallery-toggle" type="button" aria-expanded="false" aria-controls="gallery-grid">View All Gifts</button>
+    </div>
+
+    <div class="lightbox" id="gallery-lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+      <button class="lightbox-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-next" type="button" aria-label="Next image">&#10095;</button>
     </div>
   </div>
 </section>
@@ -205,6 +219,73 @@
       'Sent from the Dotzee website.'
     );
     window.location.href = 'mailto:cappy@dotzee.co.za?subject=' + subject + '&body=' + body;
+  });
+
+  const gallery = document.querySelector('#gallery-grid');
+  const galleryToggle = document.querySelector('#gallery-toggle');
+  const galleryLightbox = document.querySelector('#gallery-lightbox');
+  const lightboxImage = document.querySelector('#lightbox-image');
+  const lightboxCaption = document.querySelector('#lightbox-caption');
+  const galleryItems = Array.from(gallery.querySelectorAll('figure'));
+  let currentGalleryIndex = 0;
+
+  galleryToggle.addEventListener('click', () => {
+    const expanded = galleryToggle.getAttribute('aria-expanded') === 'true';
+    galleryToggle.setAttribute('aria-expanded', String(!expanded));
+    gallery.classList.toggle('expanded', !expanded);
+    galleryToggle.textContent = expanded ? 'View All Gifts' : 'Show Fewer Gifts';
+    if (!expanded) galleryToggle.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  function openLightbox(index) {
+    currentGalleryIndex = index;
+    const item = galleryItems[currentGalleryIndex];
+    const img = item.querySelector('img');
+    const caption = item.querySelector('figcaption');
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightboxCaption.textContent = caption ? caption.textContent : '';
+    galleryLightbox.classList.add('open');
+    galleryLightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+  }
+
+  function closeLightbox() {
+    galleryLightbox.classList.remove('open');
+    galleryLightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
+
+  function moveLightbox(direction) {
+    currentGalleryIndex = (currentGalleryIndex + direction + galleryItems.length) % galleryItems.length;
+    openLightbox(currentGalleryIndex);
+  }
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'View ' + (item.querySelector('figcaption')?.textContent || 'gallery image'));
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(index);
+      }
+    });
+  });
+
+  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  document.querySelector('.lightbox-prev').addEventListener('click', () => moveLightbox(-1));
+  document.querySelector('.lightbox-next').addEventListener('click', () => moveLightbox(1));
+  galleryLightbox.addEventListener('click', (e) => {
+    if (e.target === galleryLightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!galleryLightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') moveLightbox(-1);
+    if (e.key === 'ArrowRight') moveLightbox(1);
   });
 </script>
 </body>

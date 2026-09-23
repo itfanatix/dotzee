@@ -95,6 +95,11 @@ body.lightbox-open{overflow:hidden}
 input,select,textarea{display:block;width:100%;margin-top:7px;border:1px solid var(--line);background:#fffaf7;border-radius:14px;padding:13px 14px;font:inherit;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--sage)}
 .form-note{display:block;color:var(--muted);margin-top:10px}
+.form-success:empty,.form-error:empty,.field-error:empty{display:none}
+.form-success{background:#edf5e8;color:#45613b;border-radius:12px;padding:12px 14px;margin:0 0 14px;font-size:14px;font-weight:700}
+.form-error{background:#fff0ee;color:#9b4037;border-radius:12px;padding:12px 14px;margin:0 0 14px;font-size:14px}
+.field-error{display:block;color:#9b4037;font-size:12px;margin-top:5px}
+input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#c85b50}
 footer{background:#2f3029;color:#fff;padding:28px 0}
 .footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap;font-size:12px;opacity:.9}
 .footer-inner strong{letter-spacing:3px;font-family:Georgia,serif}

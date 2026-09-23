@@ -181,11 +181,17 @@
     </div>
     <form id="enquiry-form" class="enquiry-card">
       <h3>Send an enquiry</h3>
-      <label>Name<input required name="name" type="text" placeholder="Your name"></label>
-      <label>What are you interested in?<select name="interest"><option>Custom Gift</option><option>Personalised Gift</option><option>Corporate Gifting</option><option>Corporate Survival Pack</option><option>Stickers & Fun Gifts</option><option>Gift Hamper</option><option>Other</option></select></label>
-      <label>Message<textarea required name="message" rows="5" placeholder="Tell us what you're looking for..."></textarea></label>
-      <button class="btn btn-primary" type="submit">Create Email Enquiry</button>
-      <small class="form-note">This opens your email app with the enquiry ready to send to Dotzee.</small>
+      <div data-fs-success class="form-success" role="status" aria-live="polite"></div>
+      <div data-fs-error class="form-error" role="alert" aria-live="assertive"></div>
+      <label>Name<input required name="name" type="text" placeholder="Your name" data-fs-field autocomplete="name"></label>
+      <span data-fs-error="name" class="field-error"></span>
+      <label>Email<input required name="email" type="email" placeholder="Your email address" data-fs-field autocomplete="email"></label>
+      <span data-fs-error="email" class="field-error"></span>
+      <label>What are you interested in?<select name="interest" data-fs-field><option>Custom Gift</option><option>Personalised Gift</option><option>Corporate Gifting</option><option>Corporate Survival Pack</option><option>Stickers & Fun Gifts</option><option>Gift Hamper</option><option>Other</option></select></label>
+      <label>Message<textarea required name="message" rows="5" placeholder="Tell us what you're looking for..." data-fs-field></textarea></label>
+      <span data-fs-error="message" class="field-error"></span>
+      <button class="btn btn-primary" type="submit" data-fs-submit-btn>Send Enquiry</button>
+      <small class="form-note">Your enquiry is sent securely to Dotzee. No email app is needed.</small>
     </form>
   </div>
 </section>
@@ -207,19 +213,10 @@
 
   document.querySelector('#year').textContent = new Date().getFullYear();
 
-  document.querySelector('#enquiry-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const data = new FormData(this);
-    const subject = encodeURIComponent('Dotzee Website Enquiry - ' + data.get('interest'));
-    const body = encodeURIComponent(
-      'Hi Dotzee,\n\n' +
-      'Name: ' + data.get('name') + '\n' +
-      'Interested in: ' + data.get('interest') + '\n\n' +
-      data.get('message') + '\n\n' +
-      'Sent from the Dotzee website.'
-    );
-    window.location.href = 'mailto:cappy@dotzee.co.za?subject=' + subject + '&body=' + body;
-  });
+  window.formspree = window.formspree || function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+  formspree('initForm', { formElement: '#enquiry-form', formId: 'mkjgbqnn' });
 
   const gallery = document.querySelector('#gallery-grid');
   const galleryToggle = document.querySelector('#gallery-toggle');
@@ -288,5 +285,6 @@
     if (e.key === 'ArrowRight') moveLightbox(1);
   });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

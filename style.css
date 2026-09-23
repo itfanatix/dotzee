@@ -12,7 +12,7 @@ a{color:inherit}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,250,242,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(233,224,212,.7)}
 .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
 .brand{display:flex;align-items:center;text-decoration:none}
-.brand-logo{width:68px;height:68px;display:block;border-radius:50%;object-fit:cover}
+.brand-logo{width:285px;height:72px;display:block;object-fit:contain;object-position:left center}
 nav{display:flex;gap:28px}
 nav a{text-decoration:none;font-weight:650;font-size:14px}
 nav a:hover{color:var(--sage-dark)}
@@ -90,6 +90,7 @@ footer{background:#2f3029;color:#fff;padding:28px 0}
 }
 @media(max-width:700px){
   .nav{min-height:68px}
+  .brand-logo{width:225px;height:62px}
   nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;gap:15px}
   nav.open{display:flex}
   .menu-toggle{display:block}
